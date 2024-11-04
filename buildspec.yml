@@ -1,20 +1,11 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 14 # Adjust the Node.js version as needed
-    commands:
-      # Any commands to install dependencies can be added here
-      echo Installing source NPM dependencies...
-      npm install
-
   build:
     commands:
-      echo Build started on `date`
-      echo Building the project...
+      - echo Build started on `date`
+      - echo Copying HTML files to artifacts
 
 artifacts:
   files:
-    - '**/*' # This line specifies all files to be included in the output
-  base-directory: ./ # The base directory of the artifacts
+    - '**/*'  # This line specifies all files to be included in the output
